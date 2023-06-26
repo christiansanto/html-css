@@ -1,0 +1,9 @@
+body {
+    background-color: #4F4F4F;
+    font-family: 'Courier New', Courier, monospace;
+    text-align: center;
+}
+
+h1, p {
+    color: aliceblue;
+}

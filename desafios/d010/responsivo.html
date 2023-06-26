@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teste de Responsividade</title>
+    <style>
+        body {
+            background-color: gray;
+        }
+
+        main {
+            background-color: white;
+            padding: 20px;
+            border-radius: 10px;
+            text-align: justify;
+
+            /*width: 800px;*/
+
+            /*Em vez de usar o 'width', vc pode usar as próximas unidades pois são mais responsivas
+            - min-width
+            - max-width
+            */
+            
+            /*Esse é o tamanho minímo que o conteúdo vai ocupar. 320px é o tamanho (largura) da tela de alguns celulares muito antigos quando estão no modo retrato (em pé).*/
+            min-width: 320px;
+
+            /*Esse é o tamanho máximo que o conteúdo vai ocupar, mesmo em uma tela gigante.*/
+            max-width: 800px;
+
+            margin: auto; /*Centralizar o conteúdo.*/
+        }
+
+        main > h1 {
+            text-align: center;
+        }
+
+        img {
+            width: 100%; /*A imgaem vai se adaptar conforme o tamanho total da tela.*/
+        }
+    </style>
+</head>
+<body>
+    <main>
+        <h1>Testando Responsividade</h1>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt autem voluptatum commodi nobis cum cumque animi! Itaque, nisi veniam aliquid ipsam recusandae doloribus ab optio voluptate consequuntur mollitia quia numquam? Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam sunt possimus soluta provident sed inventore voluptatem aliquid sequi, eveniet cumque illum accusantium commodi. Iure, delectus eaque et esse recusandae odio? Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus, fugiat! Iste, neque repudiandae expedita laudantium sit fugit voluptas ut maiores minus iure nihil rem maxime culpa mollitia dolores accusantium inventore!</p>
+
+        <picture>
+            <source media="(max-width: 600px)" srcset="imagens/irina-blok-pq.jpg">
+            <img src="imagens/irina-blok.jpg" alt="Irina Blok">
+        </picture>
+
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt autem voluptatum commodi nobis cum cumque animi! Itaque, nisi veniam aliquid ipsam recusandae doloribus ab optio voluptate consequuntur mollitia quia numquam? Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam sunt possimus soluta provident sed inventore voluptatem aliquid sequi, eveniet cumque illum accusantium commodi. Iure, delectus eaque et esse recusandae odio? Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus, fugiat! Iste, neque repudiandae expedita laudantium sit fugit voluptas ut maiores minus iure nihil rem maxime culpa mollitia dolores accusantium inventore!</p>
+    </main>
+</body>
+</html>
