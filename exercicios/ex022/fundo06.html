@@ -10,10 +10,12 @@
             font-family: Arial, Helvetica, sans-serif;
             background-color: black;
             
+            /*
             background-image: url('imagens/wallpaper002.jpg');
             background-position: center top;
             background-repeat: no-repeat;
             background-size: cover;
+            */
 
             /*
             Background-Size
@@ -23,11 +25,22 @@
             - contain: a imagem será 100% exibida;
             - cover: vai cobrir a tela inteira, mas pode cortar um pouco da imagem.
             */
+
+            /*background-attachment: fixed;*/
+
+            /*
+            SHORTHAND BACKGROUND:
+            color > image > repeat > attachment > position/ > size
+            
+            a barra é usada para separar as propriedades de posicionamento e tamanho da img de fundo, isso evita confusão entre as propriedades de tamanho e posicionamento da img de fundo.
+            */
+
+            background: black url(imagens/wallpaper002.jpg) no-repeat fixed center center/ cover;
         }
 
         main {
             background-color: white;
-            width: 400px;
+            max-width: 400px;
             padding: 20px;
             margin: auto;
             text-align: justify;
