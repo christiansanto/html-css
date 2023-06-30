@@ -12,11 +12,33 @@
         table {
             width: 500px;
             border-collapse: collapse;
+            position: relative;
+        }
+
+        caption {
+            font-size: 0.9em;
+            font-weight: bold;
+            padding: 10px;
+            background-color: lightskyblue
         }
 
         thead, tfoot {
             background-color: gray;
             color: white;
+        }
+
+        thead > tr > th { /* Efeito para deixar o cabeçalho da tabela fixo na rolagem de página. */
+            position: sticky;
+            top: -1px;
+            background-color: #383838;
+        }
+
+        tbody > tr:nth-child(2n) { 
+            /* 
+            De duas em duas a propriedade será aplicada (2n);
+            Também posso usar odd (2n-1 / ímpar) ou even (par).
+            */
+            background-color: lightgray;
         }
 
         th, td {
@@ -33,6 +55,8 @@
     <!-- 
         ANATOMIA PARA TABELAS GRANDES
         TABLE
+            CAPTION - Legenda da tabela.
+
             THEAD - Cabeça
                     TR, TD, TH
             TBODY - Corpo
@@ -44,10 +68,11 @@
     <h1>Uso de tabelas grandes</h1>
 
     <table>
+        <caption>Polulação das 10 primeiras unidades federativas</caption>
         <thead>
             <tr>
-                <th>Estado</th> <!-- Cabeçalho. -->
-                <th>População</th>
+                <th scope="col">Estado</th> <!-- Cabeçalho / Scope (escopo) da coluna (col). -->
+                <th scope="col" style="width: 50px;">População</th> 
             </tr>
         </thead>
         <tbody>
@@ -94,7 +119,7 @@
         </tbody>
         <tfoot>
             <tr>
-                <th>Total de Habitantes</th>
+                <th scope="row">Total de Habitantes</th> <!-- Scope (escopo) da linha (row). -->
                 <td class="num"><strong>151.049.408</strong></td>
             </tr>
         </tfoot>
